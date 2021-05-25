@@ -27,7 +27,7 @@ export class RecipeService {
       "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/recipes/tangy_skillet_chicken_recipe/650x350_tangy_skillet_chicken_recipe.jpg",
       [
         new Ingredient('Meat', 1),
-        new Ingredient('French Fries', 20)
+        new Ingredient('Check fry', 20)
       ])
   ];
 
