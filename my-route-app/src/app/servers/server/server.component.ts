@@ -20,13 +20,14 @@ export class ServerComponent implements OnInit {
 
     this.route.params.subscribe(
       (params: Params) => {
-        this.server = this.serverService.getServer(params['id']);
+        this.server = this.serverService.getServer(+params['id']);
       }
     );
   }
 
   onEdit() {
-    this.router.navigate(['/edit'], {relativeTo: this.route})
+    this.router.navigate(['edit'],
+      {relativeTo: this.route, queryParamsHandling: 'preserve'})
   }
 
 }

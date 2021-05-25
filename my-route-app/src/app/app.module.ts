@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {RouterModule, Routes} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
@@ -10,19 +9,8 @@ import { EditServerComponent } from './servers/edit-server/edit-server.component
 import { ServerComponent } from './servers/server/server.component';
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './users/user/user.component';
-
-
-const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'users', component: UsersComponent, children: [
-      {path: ':id/:name', component: UserComponent}
-    ]
-  },
-  {path: 'servers', component: ServersComponent, children: [
-      {path: ':id', component: ServerComponent},
-      {path: ':id/edit', component: EditServerComponent}]
-  }
-];
+import { PageNotFountComponent } from './page-not-fount/page-not-fount.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -32,12 +20,13 @@ const appRoutes: Routes = [
     EditServerComponent,
     ServerComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    PageNotFountComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
