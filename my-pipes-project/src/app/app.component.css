@@ -1,0 +1,11 @@
+.container {
+  margin-top: 50px;
+}
+
+
+span.badge {
+  float: right;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
