@@ -85,9 +85,12 @@ export class AppComponent implements OnInit, OnDestroy {
     this.account.branchName = this.accountForm.value.branch;
 
     this.accountService.addAccount(this.account, this.url);
+    this.postSub = this.accountService.errorResponse
+      .subscribe(reserror => {
+        console.log(reserror);
+      });
     this.accountForm.reset();
   }
-
 
   ngOnDestroy(): void {
     this.postSub.unsubscribe();
