@@ -9,6 +9,10 @@ import { SpringComponent } from './spring/spring.component';
 import { HibernateComponent } from './hibernate/hibernate.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import {CoreModule} from "./core.module";
+import {AppRoutingModule} from "./app-routing.module";
+import { SpringBootComponent } from './spring-boot/spring-boot.component';
+import { InterviewQuesComponent } from './interview-ques/interview-ques.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,14 @@ import { FooterComponent } from './footer/footer.component';
     SpringComponent,
     HibernateComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SpringBootComponent,
+    InterviewQuesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
