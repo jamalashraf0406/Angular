@@ -72,13 +72,8 @@ h4 {
   font-style: normal;
 }
 
-#topics > li:hover {
+.topics > li:hover {
   background-color: #f6f6f6;
-}
-
-#topics .active {
-  background-color: #f6f6f6;
-  border: 0;
 }
 
 .panel {
